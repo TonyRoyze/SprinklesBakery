@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    tools:context=".Activities.User.HomePage">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp">
+
+        <ImageView
+            android:id="@+id/ic_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/selected_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/ic_back_arrow"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Categories" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="100dp">
+
+        <EditText
+            android:id="@+id/cat_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Name"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/cat_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cat_name"
+            android:layout_marginTop="30dp"
+            android:hint="Description"
+            android:lines="4"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnAddCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cat_desc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="Submit" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

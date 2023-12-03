@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    tools:context=".Activities.User.HomePage">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp">
+
+        <ImageView
+            android:id="@+id/ic_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back_arrow" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Sprinkles \nBakery"
+        android:textSize="28dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ic_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/title"
+        android:backgroundTint="@color/not_selected"
+        app:borderWidth="0dp"
+        android:src="@drawable/ic_cart"
+        app:rippleColor="@color/selected_700" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/chip_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="28dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/chips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnCake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/selected"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Cakes"
+                android:textColor="@color/grey" />
+
+            <Button
+                android:id="@+id/btnCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/btnCake"
+                android:backgroundTint="@color/not_selected"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Categories"
+                android:textColor="@color/grey" />
+
+            <Button
+                android:id="@+id/btnUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/btnCat"
+                android:backgroundTint="@color/not_selected"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Users"
+                android:textColor="@color/grey" />
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/btnUser"
+                android:backgroundTint="@color/not_selected"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Orders"
+                android:textColor="@color/grey" />
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cake_list_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chip_scroll_view"
+        android:layout_marginTop="24dp" />
+
+
+</RelativeLayout>
+
